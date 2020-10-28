@@ -111,5 +111,25 @@ Web site. Among the rates, propagation delay, and packet sizes available, find a
 
 >  End system A breaks the large file into chunks. It adds header to each chunk, thereby generating multiple packets from the file. The header in each packet includes the IP address of the destination (end system B). The packet switch uses the destination IP address in the packet to determine the outgoing link. Asking which road to take is analogous to a packet asking which outgoing link it should be forwarded on, given the packet’s destination address.
 
+**R21. Visit the Queuing and Loss applet at the companion Web site. What is the maximum emission rate and the minimum transmission rate? With those rates, what is the traffic intensity? Run the applet with these rates and determine how long it takes for packet loss to occur. Then repeat the experiment a second time and determine again how long it takes for packet loss to occur. Are the values different? Why or why not?**
 
+> The maximum emission rate is 500 packets/sec and the maximum transmission rate is 350 packets/sec. The corresponding traffic intensity is 500/350 =1.43 > 1. Loss will eventually occur for each experiment; but the time when loss first occurs will be different from one experiment to the next due to the randomness in the emission process.
+
+**R22. If two end-systems are connected through multiple routers and the data-link level between them ensures reliable data delivery, is a transport protocol offer- ing reliable data delivery between these two end-systems necessary? Why?**
+
+> Although the data-link level can ensures reliable data delivery, in some cases, transport protocl can provide error checking and correction recovery from erros.
+
+**R23. What are the five layers in the Internet protocol stack? What are the principal responsibilities of each of these layers?**
+
+> The five layers in the Internet protocol stack are – from top to bottom – the application layer, the transport layer, the network layer, the link layer, and the physical layer. 
+
+**R24. What do encapsulation and de-encapsulation mean? Why are they needed in
+a layered protocol stack?**
+
+> Data Encapsulation is the process in which some extra information is added to the data item to add some features to it. Data De-encapsulation is the reverse process of data encapsulation. The encapsulated information is removed from the received data to obtain the original data. The most important feature that it adds is the security and reliability of data transmission between two nodes in a network.
+
+**R25. Which layers in the Internet protocol stack does a router process? Which
+layers does a link-layer switch process? Which layers does a host process?**
+
+> Routers process network, link and physical layers (layers 1 through 3). (This is a little bit of a white lie, as modern routers sometimes act as firewalls or caching components, and process Transport layer as well.) Link layer switches process link and physical layers (layers 1 through2). Hosts process all five layers.
 
